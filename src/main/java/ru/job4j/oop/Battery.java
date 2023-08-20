@@ -12,9 +12,8 @@ public class Battery {
     }
 
     public void exchange(Battery another) {
-    int sum = another.load + this.load;
-    another.load =  sum >= 100 ? 100 : sum;
-    this.load = sum - another.load;
+        another.load += this.load;
+        this.load = 0;
     }
 
     public static void main(String[] args) {
