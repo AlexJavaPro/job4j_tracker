@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Student {
     private String fio;
     private String group;
-    LocalDate dateOfReceipt;
+    private LocalDate dateOfReceipt;
 
     public String getFio() {
         return fio;
