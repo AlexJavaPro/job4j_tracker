@@ -49,11 +49,10 @@ public class License {
         if (!(o instanceof License license)) {
             return false;
         }
-        return Objects.equals(getOwner(),
-                license.getOwner()) && Objects.equals(getModel(),
-                license.getModel()) && Objects.equals(getCode(),
-                license.getCode()) && Objects.equals(getCreated(),
-                license.getCreated());
+        return Objects.equals(getOwner(), license.getOwner())
+                && Objects.equals(getModel(), license.getModel())
+                && Objects.equals(getCode(), license.getCode())
+                && Objects.equals(getCreated(), license.getCreated());
     }
 
     @Override
