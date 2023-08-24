@@ -42,7 +42,6 @@ public class Tracker {
         return true;
     }
 
-
     public Item[] findAll() {
         return Arrays.copyOf(items, ids);
     }
