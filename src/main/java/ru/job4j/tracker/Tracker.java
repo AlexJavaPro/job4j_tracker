@@ -31,6 +31,18 @@ public class Tracker {
         return Arrays.copyOf(result, counter);
     }
 
+    public boolean delete(int id) {
+        int number = indexOf(id);
+        if (number == -1) {
+            return false;
+        }
+        Item[] copyItems = new Item[items.length];
+        System.arraycopy(items, number + 1, copyItems, number, items.length - number - 1);
+        size--;
+        return true;
+    }
+
+
     public Item[] findAll() {
         return Arrays.copyOf(items, ids);
     }
