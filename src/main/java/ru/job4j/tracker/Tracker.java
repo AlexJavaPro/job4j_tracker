@@ -63,7 +63,7 @@ public class Tracker {
             return false;
         }
         items[number] = item;
-        items[number].setId(id);
+        item.setId(id);
         return true;
     }
 }
