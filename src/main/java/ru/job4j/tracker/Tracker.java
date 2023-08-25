@@ -36,13 +36,14 @@ public class Tracker {
         if (number == -1) {
             return false;
         }
-        System.arraycopy(items, number + 1, items, number, items.length - number - 1);
+        System.arraycopy(items, number + 1,
+                items, number, items.length - number - 1);
         size--;
         return true;
     }
 
     public Item[] findAll() {
-        return Arrays.copyOf(items, ids);
+        return Arrays.copyOf(items, size);
     }
 
     private int indexOf(int id) {
