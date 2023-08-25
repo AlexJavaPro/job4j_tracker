@@ -32,15 +32,15 @@ public class Tracker {
     }
 
     public boolean delete(int id) {
-        int number = indexOf(id);
-        if (number == -1) {
-            return false;
+        int index = indexOf(id);
+        boolean rsl = index != -1;
+        if (rsl) {
+            System.arraycopy(items, index + 1,
+                    items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
         }
-        System.arraycopy(items, number + 1,
-                items, number, size - number - 1);
-        items[size - 1] = null;
-        size--;
-        return true;
+        return rsl;
     }
 
     public Item[] findAll() {
@@ -59,12 +59,12 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        int number = indexOf(id);
-        if (number == -1) {
-            return false;
+        int index = indexOf(id);
+        boolean rsl = index != -1;
+        if (rsl) {
+            items[index] = item;
+            item.setId(id);
         }
-        items[number] = item;
-        item.setId(id);
-        return true;
+        return rsl;
     }
 }
