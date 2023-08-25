@@ -37,7 +37,8 @@ public class Tracker {
             return false;
         }
         System.arraycopy(items, number + 1,
-                items, number, items.length - number - 1);
+                items, number, size - number - 1);
+        items[size - 1] = null;
         size--;
         return true;
     }
