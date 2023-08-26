@@ -10,28 +10,34 @@ public class StartUI {
             showMenu();
             System.out.print("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
-            if (select != 6) {
-                System.out.println("Пользователь выбрал: " + select);
-                if (select == 0) {
-                    System.out.println("=== Create a new Item ===");
-                    System.out.print("Enter name: ");
-                    String name = scanner.nextLine();
-                    Item item = new Item(name);
-                    tracker.add(item);
-                    System.out.println("Добавленная заявка: " + item);
-                } else if (select == 1) {
-                    System.out.println("=== Show all items ===");
-                    Item[] items = tracker.findAll();
-                    if (items.length > 0) {
-                        for (Item item : items) {
-                            System.out.println(item);
-                        }
-                    } else {
-                        System.out.println("Хранилище еще не содержит заявок");
+            if (select == 0) {
+                System.out.println("=== Create a new Item ===");
+                System.out.print("Enter name: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                tracker.add(item);
+                System.out.println("Добавленная заявка: " + item);
+            } else if (select == 1) {
+                System.out.println("=== Show all items ===");
+                Item[] items = tracker.findAll();
+                if (items.length > 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
                     }
-                } else if (select == 6) {
-                    run = false;
+                } else {
+                    System.out.println("Хранилище еще не содержит заявок");
                 }
+            } else if (select == 2) {
+                System.out.println("=== Edit item ===");
+                System.out.print("Enter id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                System.out.print("Enter name: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                tracker.replace(id, item);
+                System.out.println("Заявка изменена успешно.");
+            } else if (select == 6) {
+                run = false;
             }
         }
     }
