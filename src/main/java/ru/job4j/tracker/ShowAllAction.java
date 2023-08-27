@@ -18,5 +18,5 @@ public class ShowAllAction implements  UserAction {
             System.out.println("Хранилище еще не содержит заявок");
         }
         return true;
-    }
+     }
 }

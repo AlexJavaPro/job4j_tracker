@@ -14,5 +14,5 @@ public class DeleteAction implements UserAction {
         Item item = tracker.findById(id);
         System.out.println(item == null ? "Заявка удалена успешно." : "Ошибка удаления заявки.");
         return true;
-    }
+     }
 }

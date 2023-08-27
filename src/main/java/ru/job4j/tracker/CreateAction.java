@@ -14,5 +14,5 @@ public class CreateAction implements UserAction {
         tracker.add(item);
         System.out.println("Добавленная заявка: " + item);
         return true;
-    }
+     }
 }
