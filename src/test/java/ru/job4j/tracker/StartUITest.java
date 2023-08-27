@@ -14,33 +14,4 @@ public class StartUITest {
         Item expected = new Item("Fix PC");
         assertThat(created.getName()).isEqualTo(expected.getName());
     }
-
-
-    @Test
-    void showAllItems() {
-    }
-
-    @Test
-    void editItem() {
-    }
-
-    @Test
-    void deleteItem() {
-    }
-
-    @Test
-    void findItemById() {
-    }
-
-    @Test
-    void findItemByName() {
-    }
-
-    @Test
-    void init() {
-    }
-
-    @Test
-    void main() {
-    }
 }
