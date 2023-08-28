@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class ShowAllAction implements  UserAction {
+public class ShowAllAction implements UserAction {
     private final Output out;
 
     public ShowAllAction(Output out) {
@@ -24,5 +24,5 @@ public class ShowAllAction implements  UserAction {
             out.println("Хранилище еще не содержит заявок");
         }
         return true;
-     }
+    }
 }

@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class ShowAllByName implements  UserAction {
+public class ShowAllByName implements UserAction {
     private final Output out;
 
     public ShowAllByName(Output out) {
@@ -25,5 +25,5 @@ public class ShowAllByName implements  UserAction {
             out.println("Заявки с именем: " + name + " не найдены.");
         }
         return true;
-     }
+    }
 }
