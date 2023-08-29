@@ -112,7 +112,7 @@ public class TrackerTest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new ExitProgramAction()
+                new ExitProgramAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString()).isEqualTo(
