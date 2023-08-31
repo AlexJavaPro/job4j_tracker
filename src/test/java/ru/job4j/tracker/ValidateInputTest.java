@@ -31,7 +31,7 @@ public class ValidateInputTest {
     }
 
     @Test
-    public void whenСorrectInput() {
+    public void whenValidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"1"}
