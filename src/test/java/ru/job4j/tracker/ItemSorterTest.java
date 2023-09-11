@@ -32,7 +32,7 @@ public class ItemSorterTest {
         Item item4 = new Item("5");
         Item item5 = new Item("6");
         Item item6 = new Item("6");
-        List<Item> items = Arrays.asList(item1, item2, item3, item4,item5, item6);
+        List<Item> items = Arrays.asList(item1, item2, item3, item4, item5, item6);
         Collections.sort(items, new ItemDescByName());
         items.sort(new ItemDescByName());
         List<Item> expected = Arrays.asList(item5, item6, item4, item2, item3, item1);

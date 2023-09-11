@@ -6,5 +6,5 @@ public class ItemAscByName implements Comparator<Item> {
     @Override
     public int compare(Item left, Item right) {
         return left.getName().compareTo(right.getName());
-    }
+     }
 }
